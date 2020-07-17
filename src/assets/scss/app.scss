@@ -1,0 +1,65 @@
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+@import "./variables";
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+
+@import "~animate.css/animate.css";
+
+//==========================
+
+@mixin font-weight($weight) {
+  font-weight: $weight;
+}
+
+//==========================
+
+@for $i from 1 through 9 {
+  .is-#{100 * $i} {
+    @include font-weight(100 * $i)
+  }
+}
+
+// .title{
+//   font-weight: 800;
+// }
+// .subtitle{
+//   font-weight: 700;
+// }
+
+.font-secondary{
+  font-family: $family-secondary;
+}
+
+.image.is-centered{
+  margin: 0 auto;
+}
+
+.has-shadow {
+  box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.4);
+}
+
+.has-text-shadow{
+   text-shadow: 0px 2px 2px #0e0e0e;
+}
+
+.is-fixed {
+  background-attachment: fixed;
+  @include until($tablet) {
+    background-attachment: scroll;
+    background-size: contain;
+    background-repeat: repeat-y
+  }
+}
+.navbar{
+
+.navbar-end{
+
+a.navbar-item{
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+}
+}
